@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Present Simple vs Past Simple</title>
+<style>
+:root{--bg:#f3f5ff;--card:#fff;--tx:#1d2340;--mut:#6b7194;--pri:#5b4bff;--ok:#12a36b;--okb:#dff7ec;--bad:#e5484d;--badb:#fde6e6;--line:#dfe3f6;--soft:#eef0ff;--pre:#00a38c;--pas:#e8590c;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+@media(prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#12142a;--card:#1c1f3d;--tx:#eef0ff;--mut:#a0a6d4;--line:#2f3466;--soft:#262a54;--okb:#12382c;--badb:#41202a;--pri:#8a7dff;color-scheme:dark}}
+:root[data-theme="dark"]{--bg:#12142a;--card:#1c1f3d;--tx:#eef0ff;--mut:#a0a6d4;--line:#2f3466;--soft:#262a54;--okb:#12382c;--badb:#41202a;--pri:#8a7dff;color-scheme:dark}
+html{scroll-behavior:smooth;scroll-padding-top:70px}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--tx);font:16px/1.5 system-ui,-apple-system,"Segoe UI",Roboto,Arial,sans-serif}
+.hero{background:linear-gradient(135deg,#00a38c,#5b4bff 55%,#e8590c);color:#fff;padding:36px 20px 56px;text-align:center}
+.hero h1{margin:0 0 6px;font-size:clamp(26px,5vw,42px)}.hero p{margin:0;opacity:.95}
+.top{position:sticky;top:0;z-index:10;background:var(--card);border-bottom:1px solid var(--line);padding:8px 12px;padding-top:calc(8px + env(safe-area-inset-top,0px))}
+.top nav{display:flex;gap:6px;overflow-x:auto;max-width:900px;margin:auto}
+.top a{white-space:nowrap;text-decoration:none;color:var(--tx);background:var(--soft);padding:5px 12px;border-radius:99px;font-size:14px;font-weight:600}
+.pg{max-width:900px;margin:6px auto 0;display:flex;align-items:center;gap:10px;font-size:13px;color:var(--mut)}
+.pg div{flex:1;height:8px;background:var(--soft);border-radius:9px;overflow:hidden}
+#bar{display:block;height:100%;width:0;background:linear-gradient(90deg,#12a36b,#ffb703);transition:width .4s}
+main{max-width:900px;margin:-28px auto 40px;padding:0 14px}
+.card{background:var(--card);border-radius:20px;padding:22px;margin-bottom:20px;box-shadow:0 6px 24px rgba(60,50,150,.12)}
+h2{margin:0 0 12px;font-size:24px}h3{margin:0 0 4px;font-size:18px}h3 span{color:var(--pri)}
+.ins{margin:0 0 12px;color:var(--mut)}
+.act{border-top:2px dashed var(--line);padding-top:16px;margin-top:18px}
+.tw{overflow-x:auto}
+.tb{width:100%;border-collapse:separate;border-spacing:6px;min-width:500px;text-align:center}
+.tb th{border-radius:12px;color:#fff;padding:8px}.tb td{border-radius:12px;padding:10px;background:var(--soft)}
+.tb .lb{font-weight:700;width:90px}.tb .pr{border:2px solid var(--pre)}.tb .pa{border:2px solid var(--pas)}
+.pn{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:12px;margin-bottom:6px}
+.pn div{border-radius:16px;padding:12px 14px;color:#fff}.pn b{font-size:19px}
+.rules{background:var(--soft);border-radius:14px;padding:10px 14px;margin:14px 0;font-size:15px}
+.mc{background:var(--soft);border-radius:14px;padding:10px 14px;margin:8px 0}
+.btn,.chip{font:inherit;cursor:pointer;border:0;border-radius:99px;padding:8px 16px;font-weight:600;background:var(--pri);color:#fff}
+.btn:hover,.chip:hover{filter:brightness(1.1)}
+.chip{background:var(--soft);color:var(--tx);padding:6px 12px;margin:3px;border:2px solid var(--line)}
+.chip.on{border-color:var(--pri);background:var(--pri);color:#fff}
+.bank{margin:6px 0}
+.cols{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:10px;margin-top:10px}
+.col{border:2px solid var(--line);border-radius:14px;min-height:110px;padding:8px;cursor:pointer;background:var(--soft)}
+.col b{display:block;text-align:center;margin-bottom:6px}.col .chip{background:var(--okb);border-color:var(--ok);cursor:default;display:block;text-align:left}
+.it{margin:12px 0;padding:10px 12px;border-radius:14px;background:var(--soft)}
+.q{margin-bottom:6px}.n{color:var(--pri);margin-right:6px}
+input{font:inherit;font-size:16px;color:var(--tx);background:var(--card);border:2px solid #9aa0d4;border-radius:12px;padding:8px 12px;width:100%;margin:4px 0}
+input.sm{width:140px;display:inline-block;padding:3px 10px;margin:0 4px}
+input:focus{outline:0;border-color:var(--pri)}input:disabled{background:var(--okb);border-color:var(--ok)}
+.it .btn{margin-top:4px}
+.fb{margin-top:6px;font-size:15px;font-weight:600}.fb.ok{color:var(--ok)}.fb.bad{color:var(--bad)}
+.wb{display:flex;flex-wrap:wrap;gap:6px;border:2px solid var(--pri);border-radius:14px;padding:10px;margin-bottom:10px;background:var(--soft)}.wb span{font-weight:700;color:var(--pri);padding:2px 10px}
+</style></head><body>
+<header class="hero"><h1>⏰ Present vs Past ⏪</h1><p>Present Simple & Past Simple · regular verbs · Beginner</p></header>
+<div class="top"><nav><a href="#warm">Warm-up</a><a href="#prac">Practice</a></nav>
+<div class="pg"><span>Progress</span><div><i id="bar"></i></div><b id="sc">0 / 0</b></div></div>
+<main>
+<section class="card" id="warm"><h2>🔥 Warm-up: Present Simple vs Past Simple</h2>
+<div class="pn"><div style="background:var(--pre)"><b>⏰ Present Simple</b><br>habits, routines, facts<br><small>always, usually, every day, on Mondays</small></div>
+<div style="background:var(--pas)"><b>⏪ Past Simple</b><br>finished actions<br><small>yesterday, last week, two days ago</small></div></div>
+<div class="tw"><table class="tb"><tr><th></th><th style="background:var(--pre)">Present</th><th style="background:var(--pas)">Past</th></tr>
+<tr><td class="lb">➕</td><td class="pr">I / you / we / they <b>play</b><br>he / she / it <b>plays</b></td><td class="pa">I / you / he / she / it / we / they <b>played</b></td></tr>
+<tr><td class="lb">➖</td><td class="pr">I / you / we / they <b>don’t play</b><br>he / she / it <b>doesn’t play</b></td><td class="pa">all: <b>didn’t play</b></td></tr>
+<tr><td class="lb">❓</td><td class="pr"><b>Do</b> you play?<br><b>Does</b> she play?</td><td class="pa"><b>Did</b> you / she / they play?</td></tr></table></div>
+<div class="rules"><b>Present +s:</b> play → play<b>s</b> · watch → watch<b>es</b> · study → stud<b>ies</b><br><b>Past +ed:</b> walk → walk<b>ed</b> · like → like<b>d</b> · study → stud<b>ied</b><br><b>Remember:</b> after <i>don’t, doesn’t, didn’t, Do, Does, Did</i> use the <b>base verb</b> (play, not plays / played).</div>
+<h3>Quick check <span>(tap the answer)</span></h3><div id="wq"></div></section>
+<div id="app"></div>
+</main>
+<script>
+const $=(s,e=document)=>e.querySelector(s),el=(t,c,h)=>{const e=document.createElement(t);if(c)e.className=c;if(h!=null)e.innerHTML=h;return e};
+const N=s=>s.toLowerCase().replace(/[^a-z0-9 ]/g,"").replace(/\s+/g," ").trim();
+const shuf=(a,s=0)=>a.map((x,i)=>[x,Math.sin((i+s+1)*127.1)]).sort((p,q)=>p[1]-q[1]).map(p=>p[0]);
+let done=0,total=0;
+const award=()=>{done++;upd()},upd=()=>{$("#bar").style.width=Math.round(done/Math.max(total,1)*100)+"%";$("#sc").textContent=done+" / "+total};
+function mcq(box,items){items.forEach(([q,o,k,e])=>{total++;let ok=0;const d=el("div","mc"),f=el("span","fb");d.append(q+" ");o.forEach((t,j)=>{const b=el("button","btn",t);b.style.margin="2px";b.onclick=()=>{if(ok)return;if(j==k){ok=1;award();f.className="fb ok";f.textContent=" ✅ Yes! "+e}else{f.className="fb bad";f.textContent=" ❌ "+e}};d.append(b)});d.append(f);box.append(d)})}
+mcq($("#wq"),[["She ___ tennis every day.",["plays","played"],0,"every day = present; she → plays."],["We ___ TV last night.",["watch","watched"],1,"last night = past → watched."],["He doesn’t ___ fish.",["like","likes"],0,"After doesn’t use the base verb."],["___ they walk to school yesterday?",["Did","Do"],0,"yesterday = past → Did."]]);
+const R={};
+R.sort=(b,a)=>{const cats=Object.keys(a.d),rl={"Present":"Present: every day, usually, always; he/she/it + s.","Past":"Past: yesterday, last…, ago; verb + ed."};let sel=null;
+const bank=el("div","bank"),fb=el("div","fb"),cols=el("div","cols"),ws=[];cats.forEach(c=>a.d[c].forEach(w=>ws.push([w,c])));
+shuf(ws).forEach(([w,c])=>{total++;const x=el("button","chip",w);x.onclick=()=>{sel&&sel.classList.remove("on");sel=x;x.classList.add("on")};x._c=c;bank.append(x)});
+cats.forEach(c=>{const d=el("div","col","<b>"+(c=="Present"?"⏰ ":"⏪ ")+c+"</b>");d.onclick=()=>{if(!sel){fb.className="fb bad";fb.textContent="Tap a sentence first 👆";return}
+if(sel._c==c){d.append(el("button","chip",sel.textContent));sel.remove();sel=null;award();fb.className="fb ok";fb.textContent="✅ Correct! "+rl[c]}else{fb.className="fb bad";fb.textContent="❌ Not here. "+rl[sel._c]}};cols.append(d)});
+b.append(bank,fb,cols)};
+function txt(b,a,p){a.d.forEach(([q,ans,ex],i)=>{total++;let tr=0,ok=0;const A0=ans.split("|")[0],r=el("div","it"),f=el("div","fb"),inp=el("input"),ln=el("div","q",`<b class="n">${i+1}.</b>`);inp.type="text";inp.autocomplete="off";inp.spellcheck=false;inp.placeholder=a.k=="fill"?"type…":"Type your answer here…";
+if(a.k=="fill"){const [x,y]=q.split("__");ln.append(x,inp,y||"");inp.className="sm"}else if(a.k=="tr")ln.append(el("span","",q));
+r.append(ln);if(a.k!="fill")r.append(inp);
+if(a.k=="ord"){const cw=el("div","bank");shuf(A0.replace(/[.?]/g,"").split(" "),i+3).forEach(w=>{const c=el("button","chip",w);c.onclick=()=>{if(!ok)inp.value=(inp.value+" "+w).trim()};cw.append(c)});const rs=el("button","chip","↺");rs.onclick=()=>{if(!ok)inp.value=""};cw.append(rs);r.append(cw)}
+const chk=()=>{if(ok)return;const v=inp.value,n=N(v);if(!n)return;
+if(ans.split("|").map(N).includes(n)){ok=1;award();f.className="fb ok";f.textContent="✅ Correct! "+(a.k=="fill"?"":A0);inp.disabled=true}
+else{tr++;let m="❌ Not quite. ";m+=a.k!="fill"&&/\b(didnt|doesnt|dont|did|does|do)\s+(\w+\s+)?(?!need\b)\w+(ed|s)\b/.test(n)?"After do/does/did use the base verb (play, not plays/played). ":(ex||p.tip)+" ";if(tr>1)m+="Answer: "+A0;f.className="fb bad";f.textContent=m}};
+inp.onkeydown=e=>{if(e.key=="Enter")chk()};const bt=el("button","btn","Check");bt.onclick=chk;r.append(bt,f);b.append(r)})}
+R.ord=R.fill=R.tr=txt;R.mc=(b,a)=>mcq(b,a.d);
+const I={sort:"Tap a sentence, then tap its column.",fill:"Type the correct form.",tr:"Write the negative sentence.",ord:"Tap the words to make a question.",mc:"Tap the correct answer."};
+const act=(n,t,k,d,m,i)=>({n,t,k,d,m,i:i||I[k]});
+const P={id:"prac",t:"✏️ Practice",tip:"Present: verb (+s for he/she/it). Past: verb + ed. Check the time word!",acts:[
+act("1","Present or Past?","mc",[["She ___ to school every day.",["walks","walked"],0,"every day = present; she → walks."],["We ___ TV yesterday.",["watch","watched"],1,"yesterday = past → watched."],["He ___ English every evening.",["studies","studied"],0,"every evening = present; he → studies."],["He ___ football last Sunday.",["plays","played"],1,"last Sunday = past → played."],["They ___ in a bank every day.",["worked","work"],1,"every day = present; they → work."],["I ___ my room last night.",["clean","cleaned"],1,"last night = past → cleaned."],["The baby ___ every night.",["cries","cried"],0,"every night = present; baby = it → cries."],["We ___ a letter two days ago.",["post","posted"],1,"ago = past → posted."]]),
+act("2","Sort the sentences","sort",{"Present":["I play football every day.","She watches TV in the evening.","They study at school.","He usually helps his mum."],"Past":["I played football yesterday.","She watched TV last night.","They studied two hours ago.","He helped his mum last week."]}),
+act("3","Write the correct form","fill",[["She __ (play) tennis every day.","plays","she + every day (present) → play + s."],["We __ (watch) a film last night.","watched","last night = past → watch + ed."],["He __ (study) English every evening.","studies","he (present): study → studies."],["They __ (clean) the house yesterday.","cleaned","yesterday = past → clean + ed."],["My mum __ (cook) dinner every day.","cooks","mum = she (present) → cook + s."],["I __ (dance) at the party last Friday.","danced","past: dance + d."],["The bus __ (stop) here every morning.","stops","it (present) → stop + s."],["Tom __ (help) me yesterday.","helped","yesterday = past → help + ed."],["I __ (like) music. It’s my hobby.","like","I (present) → no -s."],["She __ (study) hard last night.","studied","past: study → studied (y → ied)."]]),
+act("4","Choose the correct sentence","mc",[["",["She don’t like fish.","She doesn’t like fish."],1,"she → doesn’t + base verb."],["",["He didn’t play football.","He didn’t played football."],0,"After didn’t use the base verb (play)."],["",["Does she work here?","Does she works here?"],0,"After Does use the base verb (work)."],["",["I studyed hard yesterday.","I studied hard yesterday."],1,"study → studied (y → ied)."],["",["They watch TV last night.","They watched TV last night."],1,"last night = past → watched."]]),
+act("5","Write in the Past Simple (add yesterday)","tr",[["I walk to school.","I walked to school yesterday.|Yesterday I walked to school.","walk → walked (+ ed)."],["She studies English.","She studied English yesterday.|Yesterday she studied English.","study → studied (y → ied)."],["We dance at the party.","We danced at the party yesterday.|Yesterday we danced at the party.","dance → danced (+ d)."],["He watches TV.","He watched TV yesterday.|Yesterday he watched TV.","watch → watched (+ ed)."],["They clean the house.","They cleaned the house yesterday.|Yesterday they cleaned the house.","clean → cleaned (+ ed)."],["Mum cooks lunch.","Mum cooked lunch yesterday.|Yesterday mum cooked lunch.","cook → cooked (+ ed)."]],null,"Rewrite the sentence in the past."),
+act("6","Write in the negative form","tr",[["I play tennis on Sundays.","I don’t play tennis on Sundays.|I do not play tennis on Sundays.","Present: don’t + base verb."],["She likes fish.","She doesn’t like fish.|She does not like fish.","he/she/it: doesn’t + verb (no -s)."],["We watch TV every day.","We don’t watch TV every day.|We do not watch TV every day.","Present: don’t + base verb."],["He walked to school.","He didn’t walk to school.|He did not walk to school.","Past: didn’t + base verb (no -ed)."],["They cleaned the kitchen.","They didn’t clean the kitchen.|They did not clean the kitchen.","Past: didn’t + base verb (no -ed)."],["My dad works in a bank.","My dad doesn’t work in a bank.|My dad does not work in a bank.","he/she/it: doesn’t + verb (no -s)."],["I called you last night.","I didn’t call you last night.|I did not call you last night.","Past: didn’t + base verb (no -ed)."],["She studies on Saturdays.","She doesn’t study on Saturdays.|She does not study on Saturdays.","he/she/it: doesn’t + verb (no -s)."]]),
+act("7","Do, Does or Did?","fill",[["__ you like music?","Do","you + present → Do."],["__ she cook every day?","Does","she + every day → Does."],["__ they study last night?","Did","last night = past → Did."],["__ he call you yesterday?","Did","yesterday = past → Did."],["__ Tom play tennis every Sunday?","Does","Tom = he + every Sunday → Does."],["__ we dance at the party last Friday?","Did","last Friday = past → Did."]],"Do Does Did","Type Do, Does or Did."),
+act("8","Write in order","ord",[["","Do you play football?"],["","Does she like pizza?"],["","Did they walk to school yesterday?"],["","Did he clean his room?"],["","Does your mum work here?"],["","Did you watch TV last night?"]])]};
+const s=el("section","card");s.id=P.id;s.append(el("h2","",P.t));
+P.acts.forEach(a=>{const b=el("div","act");b.append(el("h3","","Activity "+a.n+". <span>"+a.t+"</span>"),el("p","ins",a.i));if(a.k=="fill"&&a.m)b.append(el("div","wb",a.m.split(" ").map(w=>"<span>"+w+"</span>").join("")));R[a.k](b,a,P);s.append(b)});
+$("#app").append(s);upd();
+</script></body></html>
